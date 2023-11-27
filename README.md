@@ -55,9 +55,7 @@ main <- function(num1, num2) {
     print()
 }
 
-if (!interactive()) {
-  main(opt$num1, opt$num2)
-}
+main(opt$num1, opt$num2)
 ```
 
 To run this script from the terminal, 

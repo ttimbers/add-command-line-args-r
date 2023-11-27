@@ -12,6 +12,4 @@ main <- function() {
   write.csv(result, 'results/cancer/class_count.csv')
 }
 
-if (!interactive()) {
-  main()
-}
+main()
