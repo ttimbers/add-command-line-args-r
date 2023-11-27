@@ -48,14 +48,15 @@ library(docopt)
 
 opt <- docopt(doc)
 
-main <- function(opt) {
-  sum <- opt$num1 + opt$num2
-  paste0("The sum of ", opt$num1, " and ", opt$num2, " is sum") |> 
-  print()
+main <- function(num1, num2) {
+  
+  sum <- as.numeric(num1) + as.numeric(num2)
+  paste0("The sum of ", num1, " and ", num2, " is ", sum) |> 
+    print()
 }
 
 if (!interactive()) {
-  main()
+  main(opt$num1, opt$num2)
 }
 ```
 
